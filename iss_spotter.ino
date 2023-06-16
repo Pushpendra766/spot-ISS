@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const char* ssid = "WIFI_NAME_OR_SSID";
+const char* ssid = "WIFI_SSID";
 const char* password = "WIFI_PASSWORD";
 
 String serverName = "http://api.open-notify.org/iss-now.json";
@@ -154,9 +154,8 @@ void loop() {
   if(minLong<longitude and longitude<maxLong and minLat<latitude and latitude<maxLat){
     digitalWrite(greenLed, HIGH);
     digitalWrite(buzzer, HIGH);
-    delay(1000);
+  }else{
     digitalWrite(greenLed, LOW);
     digitalWrite(buzzer, LOW);
-    delay(100);
   }
 }
